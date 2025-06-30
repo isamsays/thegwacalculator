@@ -3,34 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWA Calculator Philippines 2025 - Free General Weighted Average Calculator</title>
-    <meta name="description" content="Calculate your GWA (General Weighted Average) for Philippine universities instantly. Free online GWA calculator with grading system support for scholarships">
-    <meta name="keywords" content="GWA calculator, General Weighted Average, Philippines, university grading, scholarship calculator, academic performance">
-    <meta name="author" content="GWA Calculator Philippines">
+    <title>GPA to GWA Converter Philippines 2025 - Free Grade Point Average to General Weighted Average Calculator</title>
+    <meta name="description" content="Convert your GPA to GWA instantly with our free calculator. Perfect for students applying to Philippine universities. Supports 4.0 to 5.0 scale conversion with accurate formulas.">
+    <meta name="keywords" content="GPA to GWA converter, Grade Point Average, General Weighted Average, Philippines university, GPA calculator, 4.0 scale to 5.0 scale">
+    <meta name="author" content="GPA to GWA Calculator Philippines">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://thegwacalculator.netlify.app">
-
-    <meta name="google-site-verification" content="Px8AHEA-oHVmixsaxJ0Gtu8CewWDc4WpScreqvjohro" />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NT4FCFC8K4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NT4FCFC8K4');
-</script>
+    <link rel="canonical" href="https://example.com/gpa-to-gwa-calculator">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="GWA Calculator Philippines 2025 - Free General Weighted Average Calculator">
-    <meta property="og:description" content="Calculate your GWA (General Weighted Average) for Philippine universities instantly. Free online GWA calculator with grading system support.">
+    <meta property="og:title" content="GPA to GWA Converter Philippines 2025 - Free Calculator">
+    <meta property="og:description" content="Convert your GPA to GWA instantly with our free calculator for Philippine universities.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/gwa-calculator">
+    <meta property="og:url" content="https://example.com/gpa-to-gwa-calculator">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GWA Calculator Philippines 2025">
-    <meta name="twitter:description" content="Calculate your GWA (General Weighted Average) for Philippine universities instantly.">
+    <meta name="twitter:title" content="GPA to GWA Converter Philippines 2025">
+    <meta name="twitter:description" content="Convert your GPA to GWA instantly for Philippine universities.">
     
     <style>
         * {
@@ -41,7 +30,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             min-height: 100vh;
             padding: 20px;
             line-height: 1.6;
@@ -57,7 +46,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
             color: white;
             text-align: center;
             padding: 30px 20px;
@@ -78,55 +67,19 @@
             padding: 30px;
         }
 
-        .grading-system {
+        .converter-section {
+            background: #f3f8ff;
+            padding: 30px;
+            border-radius: 15px;
             margin-bottom: 30px;
-            padding: 20px;
-            background: #f8f9ff;
-            border-radius: 10px;
-            border-left: 4px solid #4facfe;
+            border-left: 5px solid #2196f3;
         }
 
-        .grading-system label {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .grading-system select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e1e8ed;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        .grading-system select:focus {
-            outline: none;
-            border-color: #4facfe;
-        }
-
-        .course-section {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .course-input {
+        .input-container {
             display: grid;
-            grid-template-columns: 1fr 1fr auto;
-            gap: 15px;
-            margin-bottom: 15px;
-            padding: 20px;
-            background: #f8f9ff;
-            border-radius: 10px;
-            border: 1px solid #e1e8ed;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .input-group {
@@ -135,119 +88,121 @@
         }
 
         .input-group label {
-            font-weight: 500;
-            margin-bottom: 5px;
-            color: #555;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
         .input-group input,
         .input-group select {
-            padding: 10px 12px;
+            padding: 15px;
             border: 2px solid #e1e8ed;
-            border-radius: 6px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 18px;
             transition: border-color 0.3s ease;
         }
 
         .input-group input:focus,
         .input-group select:focus {
             outline: none;
-            border-color: #4facfe;
+            border-color: #2196f3;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
         }
 
-        .remove-btn {
-            background: #ff4757;
+        .convert-btn {
+            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 6px;
+            padding: 15px 40px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-            align-self: end;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            margin: 0 auto 30px;
+            display: block;
         }
 
-        .remove-btn:hover {
-            background: #ff3838;
+        .convert-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
         }
 
-        .add-course-btn {
-            background: #4facfe;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-            margin-bottom: 30px;
-        }
-
-        .add-course-btn:hover {
-            background: #2d8cfe;
-        }
-
-        .results {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .result-display {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
             color: white;
             padding: 30px;
             border-radius: 15px;
             text-align: center;
-            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        .gwa-display {
-            font-size: 3em;
+        .result-value {
+            font-size: 3.5em;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
-        .gwa-label {
-            font-size: 1.2em;
+        .result-label {
+            font-size: 1.3em;
             opacity: 0.9;
-            margin-bottom: 20px;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
+        .conversion-table {
+            background: white;
             border-radius: 10px;
-            backdrop-filter: blur(10px);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
 
-        .stat-value {
-            font-size: 1.5em;
-            font-weight: 600;
-            margin-bottom: 5px;
+        .conversion-table table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        .stat-label {
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
-
-        .clear-btn {
-            background: #ff4757;
+        .conversion-table th {
+            background: #2196f3;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
+            padding: 15px;
+            font-weight: 600;
         }
 
-        .clear-btn:hover {
-            background: #ff3838;
+        .conversion-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e1e8ed;
+            text-align: center;
+        }
+
+        .conversion-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .formula-section {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ff9800;
+            margin-bottom: 30px;
+        }
+
+        .formula-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .formula {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
         }
 
         .content-section {
@@ -259,7 +214,7 @@
             color: #333;
             font-size: 2em;
             margin-bottom: 20px;
-            border-bottom: 3px solid #4facfe;
+            border-bottom: 3px solid #2196f3;
             padding-bottom: 10px;
         }
 
@@ -302,27 +257,35 @@
         }
 
         .highlight {
-            background: #fff3cd;
+            background: #e3f2fd;
             padding: 2px 6px;
             border-radius: 4px;
             font-weight: 500;
         }
 
-        @media (max-width: 768px) {
-            .course-input {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
+        .internal-link {
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
 
-            .stats {
+        .internal-link:hover {
+            border-bottom-color: #2196f3;
+        }
+
+        @media (max-width: 768px) {
+            .input-container {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .header h1 {
                 font-size: 2em;
             }
 
-            .gwa-display {
+            .result-value {
                 font-size: 2.5em;
             }
 
@@ -330,292 +293,283 @@
             .faq-section {
                 padding: 30px 20px;
             }
+
+            .conversion-table {
+                overflow-x: auto;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>GWA Calculator Philippines 2025</h1>
-            <p>Free General Weighted Average Calculator for Philippine Universities</p>
+            <h1>GPA to GWA Converter Philippines 2025</h1>
+            <p>Convert Your Grade Point Average to General Weighted Average Instantly</p>
         </div>
         
         <div class="calculator-body">
-            <div class="grading-system">
-                <label for="gradingSystem">Select Your University's Grading System:</label>
-                <select id="gradingSystem">
-                    <option value="1to5">1.00 - 5.00 (1.00 is highest)</option>
-                    <option value="4to1">4.00 - 1.00 (4.00 is highest)</option>
-                    <option value="letter">Letter Grades (A-F)</option>
-                </select>
-            </div>
-
-            <div class="course-section">
-                <h2 class="section-title">Enter Your Courses</h2>
-                <div id="coursesContainer">
-                    <div class="course-input">
-                        <div class="input-group">
-                            <label>Course Name (Optional)</label>
-                            <input type="text" placeholder="e.g., Mathematics" class="course-name">
-                        </div>
-                        <div class="input-group">
-                            <label>Grade</label>
-                            <input type="number" step="0.01" placeholder="1.00" class="course-grade" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Units/Credits</label>
-                            <input type="number" step="0.5" placeholder="3" class="course-units" required>
-                        </div>
+            <div class="converter-section">
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="gpaInput">Enter Your GPA (0.0 - 4.0)</label>
+                        <input type="number" id="gpaInput" step="0.01" min="0" max="4" placeholder="e.g., 3.5">
                     </div>
-                </div>
-                <button class="add-course-btn" onclick="addCourse()">+ Add Another Course</button>
-            </div>
-
-            <div class="results">
-                <div class="gwa-display" id="gwaResult">0.00</div>
-                <div class="gwa-label">Your General Weighted Average</div>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-value" id="totalCourses">0</div>
-                        <div class="stat-label">Total Courses</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="totalUnits">0</div>
-                        <div class="stat-label">Total Units</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="gradeEquivalent">-</div>
-                        <div class="stat-label">Grade Equivalent</div>
+                    <div class="input-group">
+                        <label for="gpaScale">Select GPA Scale</label>
+                        <select id="gpaScale">
+                            <option value="4.0">4.0 Scale (Standard)</option>
+                            <option value="5.0">5.0 Scale (Weighted)</option>
+                        </select>
                     </div>
                 </div>
                 
-                <button class="clear-btn" onclick="clearAll()">Clear All Courses</button>
+                <button class="convert-btn" onclick="convertGPA()">Convert to GWA</button>
+                
+                <div class="result-display" id="resultDisplay" style="display: none;">
+                    <div class="result-value" id="gwaResult">0.00</div>
+                    <div class="result-label">Your GWA (General Weighted Average)</div>
+                </div>
+            </div>
+
+            <div class="formula-section">
+                <div class="formula-title">Conversion Formula</div>
+                <div class="formula" id="formulaDisplay">
+                    GWA = (5.0 - GPA) × (5.0/4.0)
+                </div>
+                <p><strong>Example:</strong> If your GPA is 3.5 on a 4.0 scale, your GWA would be: (5.0 - 3.5) × (5.0/4.0) = 1.875</p>
+            </div>
+
+            <div class="conversion-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>GPA (4.0 Scale)</th>
+                            <th>GWA (5.0 Scale)</th>
+                            <th>Grade Description</th>
+                            <th>Letter Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4.0</td>
+                            <td>1.00</td>
+                            <td>Excellent</td>
+                            <td>A+</td>
+                        </tr>
+                        <tr>
+                            <td>3.7</td>
+                            <td>1.38</td>
+                            <td>Very Good</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>3.3</td>
+                            <td>1.88</td>
+                            <td>Good</td>
+                            <td>B+</td>
+                        </tr>
+                        <tr>
+                            <td>3.0</td>
+                            <td>2.25</td>
+                            <td>Satisfactory</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>2.7</td>
+                            <td>2.63</td>
+                            <td>Fair</td>
+                            <td>B-</td>
+                        </tr>
+                        <tr>
+                            <td>2.3</td>
+                            <td>3.13</td>
+                            <td>Passing</td>
+                            <td>C+</td>
+                        </tr>
+                        <tr>
+                            <td>2.0</td>
+                            <td>3.50</td>
+                            <td>Conditional</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>1.0</td>
+                            <td>4.75</td>
+                            <td>Poor</td>
+                            <td>D</td>
+                        </tr>
+                        <tr>
+                            <td>0.0</td>
+                            <td>5.00</td>
+                            <td>Failed</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>Understanding GWA: Your Complete Guide to General Weighted Average in the Philippines</h2>
+            <h2>Understanding GPA to GWA Conversion for Philippine Universities</h2>
             
-            <p>The <strong>General Weighted Average (GWA)</strong> is a crucial academic metric used throughout the Philippines to evaluate student performance in colleges and universities. Unlike a simple average, GWA considers both your grades and the number of units or credits each course carries, providing a more accurate representation of your academic achievement. This weighted system ensures that more demanding courses with higher unit values have a proportionally greater impact on your overall academic standing.</p>
+            <p>Converting your <strong>Grade Point Average (GPA)</strong> to <strong>General Weighted Average (GWA)</strong> is essential for students planning to study in the Philippines or transfer from international institutions. The conversion process involves understanding two different grading systems: the internationally used 4.0 GPA scale and the Philippine 5.0 GWA scale. For students already familiar with the Philippine system who need to calculate their overall academic performance, our <a href="/gwa-calculator.html" class="internal-link">GWA Calculator Philippines</a> provides comprehensive tools to compute your General Weighted Average based on individual course grades and units.</p>
 
-            <p>In the <a rel="nofollow" href="https://ieducationphl.ched.gov.ph/">Philippine educational system</a>, GWA serves as the primary tool for determining academic honors, scholarship eligibility, and graduate school admissions. Most universities in the Philippines use a grading scale where <span class="highlight">1.00 represents the highest grade</span> and <span class="highlight">5.00 typically indicates failure</span>. The lower your GWA, the better your academic performance, which can sometimes confuse students familiar with other grading systems where higher numbers indicate better performance.</p>
+            <p>The fundamental difference between GPA and GWA lies in their scale orientation and calculation methodology. GPA typically uses a 4.0 scale where **4.0 represents the highest grade** (equivalent to an A+ or 90-100%), while GWA uses a 5.0 scale where **1.0 represents the highest grade** and **5.0 indicates failure**. This inverse relationship means that higher GPA values correspond to lower GWA values, which can be confusing for students transitioning between educational systems[1][4].</p>
 
-            <h3>Why GWA Matters for Filipino Students</h3>
+            <h3>The Mathematical Formula Behind GPA to GWA Conversion</h3>
             
-            <p>Your GWA significantly impacts your academic and professional future in several ways. For scholarship applications, most programs require a minimum GWA ranging from 1.75 to 2.50, depending on the scholarship provider and program prestige. The Department of Science and Technology (DOST) scholarships, for instance, typically require maintaining a GWA of 2.50 or better, while more competitive scholarships like the OWWA Education for Development Scholarship Program require a GWA equivalent to 85% or higher for continuing students.</p>
+            <p>The standard conversion formula used by most Philippine universities is: **GWA = (5.0 - GPA) × (5.0/4.0)**. This formula accounts for the inverse relationship between the two scales and ensures accurate conversion across different academic contexts. For example, a student with a GPA of 3.5 would have a GWA of approximately 1.88, which falls within the "Good" performance range in the Philippine system[1][4].</p>
 
-            <p>Academic honors also depend heavily on your GWA performance. To graduate <strong>Cum Laude</strong>, most Philippine universities require a GWA between 1.51 and 1.75, while <strong>Magna Cum Laude</strong> typically requires 1.26 to 1.50, and the prestigious <strong>Summa Cum Laude</strong> demands a GWA between 1.00 and 1.25. These honors not only provide recognition but also enhance your resume and improve your chances of landing competitive employment opportunities or gaining admission to graduate programs.</p>
+            <p>However, some institutions may use alternative formulas depending on their specific requirements. The simplified formula **GWA = (4 - GPA) + 1** is also commonly used, particularly for quick conversions. It's important to verify with your target institution which conversion method they prefer, as slight variations can impact scholarship eligibility and admission decisions[4][7].</p>
 
-            <h3>How Different Universities Calculate GWA</h3>
+            <h3>Why GPA to GWA Conversion Matters for Students</h3>
             
-            <p>While the basic formula remains consistent across Philippine universities, different institutions may have varying approaches to GWA calculation. The University of the Philippines system, for example, uses a 1.00 to 5.00 scale where 1.00 is excellent and 3.00 is the minimum passing grade. De La Salle University follows a similar system but may have different grade point equivalents for letter grades. State universities like Polytechnic University of the Philippines (PUP) and Technological University of the Philippines (TUP) also use the 1.00 to 5.00 system but with their own specific grade descriptions and requirements.</p>
+            <p>Accurate GPA to GWA conversion is crucial for several academic and professional scenarios. International students applying to Philippine universities must convert their GPA to determine eligibility for degree programs, scholarships, and academic honors. Many Philippine scholarships require a minimum GWA of 2.00 to 2.50, which corresponds to a GPA range of 2.5 to 3.0 on the 4.0 scale[1][7].</p>
 
-            <p>Some private universities have adopted systems similar to international standards, using a 4.00 scale where 4.00 is the highest grade. When transferring between institutions or applying for international programs, it's essential to understand how your GWA converts between different grading systems. Our calculator supports multiple grading systems to help you understand your academic standing regardless of your university's specific approach.</p>
+            <p>Graduate school applications in the Philippines often specify GWA requirements rather than GPA equivalents. For instance, competitive graduate programs typically require a GWA of 1.75 or better, which translates to approximately a 3.3 GPA. Understanding these conversions helps students make informed decisions about their academic goals and eligibility for advanced degree programs[7][9].</p>
+
+            <h3>Different GPA Scales and Their Conversion Implications</h3>
+            
+            <p>While the 4.0 GPA scale is most common internationally, some institutions use weighted 5.0 scales for advanced coursework like AP or IB classes. When converting from a 5.0 GPA scale to GWA, the formula adjusts accordingly: **GWA = (5.0 - GPA) × (5.0/5.0)**. Students must identify their specific GPA scale before conversion to ensure accuracy[5][8][11].</p>
+
+            <p>The complexity increases when dealing with percentage-based grades or letter grades that need conversion to GPA first. Most international students find it helpful to first convert their grades to a standardized 4.0 GPA scale, then apply the GPA to GWA conversion formula. This two-step process minimizes errors and provides consistent results across different educational backgrounds[10][11].</p>
         </div>
 
         <div class="faq-section">
-            <h2>Frequently Asked Questions About GWA Calculator</h2>
+            <h2>Frequently Asked Questions About GPA to GWA Conversion</h2>
             
             <div class="faq-item">
-                <div class="faq-question">What is GWA and how is it different from a regular average?</div>
+                <div class="faq-question">What is the most accurate formula to convert GPA to GWA?</div>
                 <div class="faq-answer">
-                    GWA stands for General Weighted Average, which is a grading system used in Philippine universities to evaluate student academic performance. Unlike a simple average that treats all subjects equally, GWA considers the number of units or credits each course carries. This means that a 3-unit major subject has more impact on your GWA than a 1-unit elective course. The formula is: GWA = (Sum of Grade × Units for all subjects) ÷ Total Units taken.
+                    The most widely accepted formula is GWA = (5.0 - GPA) × (5.0/4.0) for a 4.0 GPA scale. This formula accounts for the inverse relationship between GPA and GWA scales, where higher GPA values correspond to lower (better) GWA values. For a 5.0 GPA scale, use GWA = (5.0 - GPA). Always verify with your target institution which conversion method they prefer, as some may use alternative formulas.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">How do I calculate my GWA for scholarship applications?</div>
+                <div class="faq-question">Can I use GPA to GWA conversion for scholarship applications in the Philippines?</div>
                 <div class="faq-answer">
-                    To calculate your GWA for scholarship applications, gather all your final grades and their corresponding units from your transcript. Multiply each grade by its units, add all the results together, then divide by the total number of units. Most scholarships in the Philippines require a GWA of 2.50 or better (on a 1.00-5.00 scale), though competitive programs like DOST and OWWA scholarships may require higher GWAs of 2.00 or better.
+                    Yes, GPA to GWA conversion is essential for international students applying for scholarships in the Philippines. Most Philippine scholarships specify GWA requirements: DOST scholarships typically require a GWA of 2.50 or better, while more competitive programs may require 2.00 or higher. A GPA of 3.0 converts to approximately GWA 2.25, which meets most scholarship requirements.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I convert GPA to GWA if my school uses a 5.0 weighted scale?</div>
+                <div class="faq-answer">
+                    For a 5.0 weighted GPA scale (common in schools with AP/IB courses), use the formula: GWA = (5.0 - GPA). If your weighted GPA exceeds 4.0 due to advanced coursework, you may need to calculate your unweighted GPA first, then convert to GWA. Some Philippine universities may cap the conversion at 1.00 GWA regardless of how high your weighted GPA is.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">What GWA do I need for Latin honors in Philippine universities?</div>
                 <div class="faq-answer">
-                    The GWA requirements for Latin honors vary by university, but generally follow this pattern: Cum Laude requires a GWA of 1.51-1.75, Magna Cum Laude needs 1.26-1.50, and Summa Cum Laude demands 1.00-1.25. Additionally, most universities require that you have no failing grades (5.00) and no grades below 2.00 for any honor. Some institutions also require completing a minimum percentage of units within their university to qualify for honors.
+                    Latin honors requirements vary by institution, but generally: Cum Laude requires GWA 1.75 or better (equivalent to GPA 3.3), Magna Cum Laude needs GWA 1.50 or better (equivalent to GPA 3.5), and Summa Cum Laude demands GWA 1.25 or better (equivalent to GPA 3.7). Converting your GPA helps you understand your honors eligibility when applying to Philippine universities.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Can I improve my GWA after getting low grades in some subjects?</div>
+                <div class="faq-question">Do all Philippine universities use the same GPA to GWA conversion method?</div>
                 <div class="faq-answer">
-                    Yes, you can improve your GWA over time, though it becomes more challenging as you progress through your program. Since GWA is cumulative, earning higher grades in future courses will gradually improve your overall average. Some universities allow students to retake failed courses, and the new grade may replace the failing grade in GWA calculations. Focus on high-unit courses for maximum impact, and consider seeking academic support or tutoring for challenging subjects.
+                    While most Philippine universities use similar conversion principles, some institutions may have specific requirements or modified formulas. State universities like UP, PUP, and TUP generally follow standard conversion methods, but private universities might have variations. Always check with the admissions office of your target institution for their official conversion guidelines, especially for high-stakes applications like graduate school or scholarships.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">How does GWA compare to GPA used in other countries?</div>
+                <div class="faq-question">Can I convert my percentage grades directly to GWA without calculating GPA first?</div>
                 <div class="faq-answer">
-                    GWA in the Philippines is similar to Grade Point Average (GPA) used in the United States and other countries, but with key differences. Philippine GWA typically uses a 1.00-5.00 scale where 1.00 is the highest grade, while US GPA uses a 0.00-4.00 scale where 4.00 is highest. Both systems weight grades by credit hours/units, but the scales are inverted. When applying to international programs, you may need to convert your GWA to the equivalent GPA scale using official conversion formulas provided by educational institutions.
+                    While direct percentage-to-GWA conversion is possible, it's generally more accurate to first convert percentages to GPA, then GPA to GWA. This two-step process follows international standards and provides more reliable results. Most Philippine universities are familiar with GPA conversions, making this the preferred method for international student applications.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What should I do if my GWA is below scholarship requirements?</div>
+                <div class="faq-question">How does GPA to GWA conversion affect graduate school applications?</div>
                 <div class="faq-answer">
-                    If your GWA is below scholarship requirements, focus on improving your grades in remaining courses, especially those with higher unit values. Consider retaking failed courses if your university allows it, and seek academic support through tutoring or study groups. Some scholarships have different GWA requirements for renewal versus initial application, so maintain good grades once you receive aid. Additionally, explore alternative scholarships with lower GWA requirements or those that consider other factors like financial need or community service.
+                    Graduate schools in the Philippines typically require a minimum GWA of 2.00 to 2.50 for admission, equivalent to a GPA of 2.5 to 3.0. Competitive programs may require GWA 1.75 or better (GPA 3.3+). Converting your GPA accurately is crucial because even small differences can affect admission eligibility. Some graduate programs also consider the rigor of your undergraduate coursework alongside the converted GWA.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Do all courses count equally in GWA calculation?</div>
+                <div class="faq-question">What should I do if my converted GWA seems too low for my target program?</div>
                 <div class="faq-answer">
-                    No, courses do not count equally in GWA calculation. Each course's impact on your GWA depends on its number of units or credits. A 3-unit course has three times more impact than a 1-unit course. This is why major subjects (which typically carry more units) significantly affect your GWA compared to physical education or other low-unit courses. Some universities may exclude certain courses like pass/fail subjects, non-credit courses, or remedial classes from GWA calculations.
+                    If your converted GWA appears low, first verify that you're using the correct conversion formula and GPA scale. Consider retaking courses to improve your GPA before applying, or look for programs with more flexible admission requirements. Some universities consider other factors like work experience, research background, or standardized test scores alongside GWA. You might also explore conditional admission programs that allow improvement of academic standing.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">How often should I calculate my GWA during my studies?</div>
+                <div class="faq-question">Is the GPA to GWA conversion the same for all academic levels?</div>
                 <div class="faq-answer">
-                    You should calculate your GWA at the end of each semester or academic year to track your progress and ensure you meet requirements for scholarships, honors, or graduate school applications. Regular monitoring helps you identify trends in your academic performance and take corrective action if needed. Before applying for scholarships or academic programs, always recalculate your GWA to ensure accuracy, as even small errors can affect your eligibility for competitive opportunities.
+                    The mathematical conversion formula remains the same across academic levels, but requirements differ. Undergraduate programs typically require lower GWA thresholds (2.50-3.00) compared to graduate programs (1.75-2.50). Professional programs like medicine or law may have even stricter requirements. The conversion method stays consistent, but the significance of the resulting GWA varies depending on your target academic level.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What happens if I have incomplete (INC) or dropped (DRP) grades?</div>
+                <div class="faq-question">How can I verify if my GPA to GWA conversion is accurate?</div>
                 <div class="faq-answer">
-                    Incomplete (INC) and dropped (DRP) grades are typically not included in GWA calculations until they are resolved. However, policies vary by university. Some institutions may convert unresolved INC grades to failing grades (5.00) after a certain period, which would then be included in your GWA. For scholarship and honor eligibility, most universities require that you have no INC or DRP grades. Always check with your registrar's office about how these grades affect your GWA and academic standing.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can I use this GWA calculator for graduate school applications?</div>
-                <div class="faq-answer">
-                    Yes, this GWA calculator works for both undergraduate and graduate programs. However, graduate programs often have specific GWA requirements and may calculate GWA differently. For example, some graduate programs only consider grades from your major courses or the last 60 units of your undergraduate program. Graduate school applications typically require a minimum GWA of 2.00 to 2.50, though competitive programs may require higher GPAs. Always verify the specific requirements and calculation methods for your target graduate program.
+                    To verify accuracy, use multiple conversion methods and compare results. Check if your converted GWA aligns with the grade descriptions (1.00-1.25 = Excellent, 1.26-1.75 = Very Good, etc.). Contact the admissions office of your target university for official conversion verification. You can also consult with educational counselors familiar with Philippine university systems or use multiple online conversion tools to cross-check your results.
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        let courseCount = 1;
-
-        function addCourse() {
-            if (courseCount >= 30) {
-                alert('Maximum 30 courses allowed');
+        function convertGPA() {
+            const gpaInput = document.getElementById('gpaInput');
+            const gpaScale = document.getElementById('gpaScale');
+            const resultDisplay = document.getElementById('resultDisplay');
+            const gwaResult = document.getElementById('gwaResult');
+            const formulaDisplay = document.getElementById('formulaDisplay');
+            
+            const gpa = parseFloat(gpaInput.value);
+            const scale = parseFloat(gpaScale.value);
+            
+            if (isNaN(gpa) || gpa < 0 || gpa > scale) {
+                alert(`Please enter a valid GPA between 0.0 and ${scale}`);
                 return;
             }
-
-            const container = document.getElementById('coursesContainer');
-            const courseDiv = document.createElement('div');
-            courseDiv.className = 'course-input';
-            courseDiv.innerHTML = `
-                <div class="input-group">
-                    <label>Course Name (Optional)</label>
-                    <input type="text" placeholder="e.g., Science" class="course-name">
-                </div>
-                <div class="input-group">
-                    <label>Grade</label>
-                    <input type="number" step="0.01" placeholder="1.00" class="course-grade" required oninput="calculateGWA()">
-                </div>
-                <div class="input-group">
-                    <label>Units/Credits</label>
-                    <input type="number" step="0.5" placeholder="3" class="course-units" required oninput="calculateGWA()">
-                </div>
-                <button class="remove-btn" onclick="removeCourse(this)">Remove</button>
-            `;
-            container.appendChild(courseDiv);
-            courseCount++;
-        }
-
-        function removeCourse(button) {
-            button.parentElement.remove();
-            courseCount--;
-            calculateGWA();
-        }
-
-        function clearAll() {
-            const container = document.getElementById('coursesContainer');
-            container.innerHTML = `
-                <div class="course-input">
-                    <div class="input-group">
-                        <label>Course Name (Optional)</label>
-                        <input type="text" placeholder="e.g., Mathematics" class="course-name">
-                    </div>
-                    <div class="input-group">
-                        <label>Grade</label>
-                        <input type="number" step="0.01" placeholder="1.00" class="course-grade" required oninput="calculateGWA()">
-                    </div>
-                    <div class="input-group">
-                        <label>Units/Credits</label>
-                        <input type="number" step="0.5" placeholder="3" class="course-units" required oninput="calculateGWA()">
-                    </div>
-                </div>
-            `;
-            courseCount = 1;
-            calculateGWA();
-        }
-
-        function calculateGWA() {
-            const courses = document.querySelectorAll('.course-input');
-            let totalWeightedGrades = 0;
-            let totalUnits = 0;
-            let validCourses = 0;
-
-            courses.forEach(course => {
-                const grade = parseFloat(course.querySelector('.course-grade').value);
-                const units = parseFloat(course.querySelector('.course-units').value);
-
-                if (!isNaN(grade) && !isNaN(units) && grade > 0 && units > 0) {
-                    totalWeightedGrades += grade * units;
-                    totalUnits += units;
-                    validCourses++;
-                }
-            });
-
-            const gwa = totalUnits > 0 ? totalWeightedGrades / totalUnits : 0;
             
-            document.getElementById('gwaResult').textContent = gwa.toFixed(2);
-            document.getElementById('totalCourses').textContent = validCourses;
-            document.getElementById('totalUnits').textContent = totalUnits.toFixed(1);
+            let gwa;
+            let formula;
             
-            updateGradeEquivalent(gwa);
-        }
-
-        function updateGradeEquivalent(gwa) {
-            const gradingSystem = document.getElementById('gradingSystem').value;
-            let equivalent = '-';
-
-            if (gwa > 0) {
-                switch(gradingSystem) {
-                    case '1to5':
-                        if (gwa <= 1.25) equivalent = 'Excellent';
-                        else if (gwa <= 1.75) equivalent = 'Very Good';
-                        else if (gwa <= 2.25) equivalent = 'Good';
-                        else if (gwa <= 2.75) equivalent = 'Satisfactory';
-                        else if (gwa <= 3.00) equivalent = 'Passing';
-                        else equivalent = 'Failed';
-                        break;
-                    case '4to1':
-                        if (gwa >= 3.5) equivalent = 'Excellent';
-                        else if (gwa >= 3.0) equivalent = 'Very Good';
-                        else if (gwa >= 2.5) equivalent = 'Good';
-                        else if (gwa >= 2.0) equivalent = 'Satisfactory';
-                        else if (gwa >= 1.0) equivalent = 'Passing';
-                        else equivalent = 'Failed';
-                        break;
-                    case 'letter':
-                        equivalent = 'Letter Grade';
-                        break;
-                }
+            if (scale === 4.0) {
+                // Standard 4.0 to 5.0 conversion
+                gwa = (5.0 - gpa) * (5.0 / 4.0);
+                formula = "GWA = (5.0 - GPA) × (5.0/4.0)";
+            } else {
+                // 5.0 to 5.0 conversion
+                gwa = 5.0 - gpa;
+                formula = "GWA = (5.0 - GPA)";
             }
-
-            document.getElementById('gradeEquivalent').textContent = equivalent;
+            
+            // Ensure GWA stays within valid range
+            gwa = Math.max(1.0, Math.min(5.0, gwa));
+            
+            gwaResult.textContent = gwa.toFixed(2);
+            formulaDisplay.textContent = formula;
+            resultDisplay.style.display = 'block';
+            
+            // Scroll to result
+            resultDisplay.scrollIntoView({ behavior: 'smooth' });
         }
-
-        document.addEventListener('input', function(e) {
-            if (e.target.classList.contains('course-grade') || e.target.classList.contains('course-units')) {
-                calculateGWA();
+        
+        // Add enter key support
+        document.getElementById('gpaInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                convertGPA();
             }
         });
-
-        document.getElementById('gradingSystem').addEventListener('change', function() {
-            calculateGWA();
+        
+        // Real-time conversion as user types
+        document.getElementById('gpaInput').addEventListener('input', function() {
+            if (this.value !== '') {
+                convertGPA();
+            }
         });
-
-        calculateGWA();
+        
+        document.getElementById('gpaScale').addEventListener('change', function() {
+            const gpaInput = document.getElementById('gpaInput');
+            if (gpaInput.value !== '') {
+                convertGPA();
+            }
+        });
     </script>
 </body>
 </html>
