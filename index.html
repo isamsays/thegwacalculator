@@ -80,7 +80,7 @@
   <section class="calculator">
   <h2 style="text-align:center; margin-bottom:10px;">🎓 GWA Calculator</h2>
   <p style="text-align:center; margin-bottom:20px;">
-    Enter your subjects, units, and grades below to instantly calculate your <strong>General Weighted Average</strong>.
+    Select your subjects, units, and grades to instantly calculate your <strong>General Weighted Average (GWA)</strong>.
   </p>
   
   <form id="gwa-form">
@@ -95,9 +95,43 @@
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" name="subject[]" placeholder="e.g. Math" required></td>
-          <td><input type="number" name="units[]" step="0.1" min="0" required></td>
-          <td><input type="number" name="grade[]" step="0.01" min="1" max="5" required></td>
+          <td>
+            <select name="subject[]" onchange="checkOther(this)">
+              <option value="Math">Math</option>
+              <option value="English">English</option>
+              <option value="Science">Science</option>
+              <option value="History">History</option>
+              <option value="Computer">Computer</option>
+              <option value="PE">PE</option>
+              <option value="Other">Other...</option>
+            </select>
+            <input type="text" name="subjectOther[]" placeholder="Enter Subject" style="display:none; margin-top:5px;">
+          </td>
+          <td>
+            <select name="units[]">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </td>
+          <td>
+            <select name="grade[]">
+              <option value="1.0">1.0</option>
+              <option value="1.25">1.25</option>
+              <option value="1.5">1.5</option>
+              <option value="1.75">1.75</option>
+              <option value="2.0">2.0</option>
+              <option value="2.25">2.25</option>
+              <option value="2.5">2.5</option>
+              <option value="2.75">2.75</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+          </td>
           <td><button type="button" onclick="removeRow(this)">❌</button></td>
         </tr>
       </tbody>
@@ -115,7 +149,7 @@
 
 <style>
   .calculator { 
-    max-width: 700px; margin: 20px auto; padding: 25px; 
+    max-width: 800px; margin: 20px auto; padding: 25px; 
     background: #ffffff; border-radius: 12px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
@@ -124,7 +158,7 @@
     border: 1px solid #ddd; padding: 10px; text-align: center; 
   }
   .calculator th { background: #f0f6ff; }
-  .calculator input { 
+  .calculator select, .calculator input { 
     width: 95%; padding: 6px; border: 1px solid #ccc; border-radius: 6px; 
   }
   .calculator button { 
@@ -142,9 +176,43 @@ function addRow() {
   let tableBody = document.querySelector("#gwa-table tbody");
   let row = document.createElement("tr");
   row.innerHTML = `
-    <td><input type="text" name="subject[]" placeholder="e.g. Science" required></td>
-    <td><input type="number" name="units[]" step="0.1" min="0" required></td>
-    <td><input type="number" name="grade[]" step="0.01" min="1" max="5" required></td>
+    <td>
+      <select name="subject[]" onchange="checkOther(this)">
+        <option value="Math">Math</option>
+        <option value="English">English</option>
+        <option value="Science">Science</option>
+        <option value="History">History</option>
+        <option value="Computer">Computer</option>
+        <option value="PE">PE</option>
+        <option value="Other">Other...</option>
+      </select>
+      <input type="text" name="subjectOther[]" placeholder="Enter Subject" style="display:none; margin-top:5px;">
+    </td>
+    <td>
+      <select name="units[]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </td>
+    <td>
+      <select name="grade[]">
+        <option value="1.0">1.0</option>
+        <option value="1.25">1.25</option>
+        <option value="1.5">1.5</option>
+        <option value="1.75">1.75</option>
+        <option value="2.0">2.0</option>
+        <option value="2.25">2.25</option>
+        <option value="2.5">2.5</option>
+        <option value="2.75">2.75</option>
+        <option value="3.0">3.0</option>
+        <option value="4.0">4.0</option>
+        <option value="5.0">5.0</option>
+      </select>
+    </td>
     <td><button type="button" onclick="removeRow(this)">❌</button></td>
   `;
   tableBody.appendChild(row);
@@ -153,6 +221,15 @@ function addRow() {
 function removeRow(btn) {
   let row = btn.parentNode.parentNode;
   row.parentNode.removeChild(row);
+}
+
+function checkOther(selectEl) {
+  let inputEl = selectEl.nextElementSibling;
+  if (selectEl.value === "Other") {
+    inputEl.style.display = "block";
+  } else {
+    inputEl.style.display = "none";
+  }
 }
 
 function calculateGWA() {
@@ -172,7 +249,7 @@ function calculateGWA() {
   if (totalUnits > 0) {
     let gwa = (totalWeighted / totalUnits).toFixed(2);
     document.getElementById("gwa-result").innerHTML = 
-      `✅ Your GWA is: <strong>${gwa}</strong><br>📌 Total Units: ${totalUnits}`;
+      `✅ Your GWA is: <strong>${gwa}</strong><br>📌 Total Units: ${totalUnits}<br>📊 Weighted Total: ${totalWeighted.toFixed(2)}`;
   } else {
     document.getElementById("gwa-result").innerText = "⚠️ Please enter valid values.";
   }
@@ -182,6 +259,7 @@ function resetResult() {
   document.getElementById("gwa-result").innerText = "";
 }
 </script>
+
 
   <!-- Longform SEO Content -->
   <h1>GWA Calculator Philippines 2025</h1>
