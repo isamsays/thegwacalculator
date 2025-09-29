@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GWA Calculator Philippines 2025 | Convert GPA to GWA Online</title>
+  <meta name="description" content="Free GWA Calculator to convert GPA to GWA for Philippine universities. Supports 4.0 and 5.0 GPA scales. Fast, accurate, student-friendly.">
+  <link rel="canonical" href="https://thegwacalculator.netlify.app/index.html">
+  <meta property="og:title" content="GWA Calculator Philippines 2025 | Convert GPA to GWA Online">
+  <meta property="og:description" content="Easily convert GPA to GWA using our free calculator for Philippine students.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <header class="p-6 bg-blue-600 text-white">
+    <h1 class="text-2xl font-bold">GWA Calculator Philippines 2025</h1>
+  </header>
+  <main class="max-w-3xl mx-auto p-6">
+    <p>Welcome to the most accurate <strong>GWA Calculator</strong> for Philippine students. Convert GPA to GWA instantly.</p>
+    <section class="mt-6 p-4 bg-white dark:bg-slate-800 rounded shadow">
+      <label for="gpa" class="block font-semibold">Enter your GPA:</label>
+      <input type="number" id="gpa" step="0.01" class="border p-2 w-full mt-2 rounded" placeholder="e.g. 3.5">
+      <label for="scale" class="block mt-4 font-semibold">Select GPA scale:</label>
+      <select id="scale" class="border p-2 w-full mt-2 rounded">
+        <option value="4">4.0 Scale</option>
+        <option value="5">5.0 Scale</option>
+      </select>
+      <button onclick="calculateGWA()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+      <p id="result" class="mt-4 font-bold"></p>
+    </section>
+    <section class="mt-6">
+      <h2 class="text-xl font-semibold">Learn More About GWA</h2>
+      <ul class="list-disc list-inside">
+        <li><a href="./how-to-compute-gwa.html" class="underline">How to Compute GWA</a></li>
+        <li><a href="./gpa-vs-gwa.html" class="underline">GPA vs. GWA</a></li>
+        <li><a href="./philippines-university-gwa.html" class="underline">Top Universities and Their GWA Systems</a></li>
+        <li><a href="./why-your-gwa-matters.html" class="underline">Why Your GWA Matters</a></li>
+        <li><a href="./gwa-faq.html" class="underline">Frequently Asked Questions</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="p-6 bg-slate-200 dark:bg-slate-800 mt-10">
+    <nav class="space-x-4">
+      <a href="./about.html" class="underline">About</a>
+      <a href="./contact.html" class="underline">Contact</a>
+      <a href="./privacy.html" class="underline">Privacy Policy</a>
+    </nav>
+  </footer>
+  <script>
+    function calculateGWA() {
+      const gpa = parseFloat(document.getElementById('gpa').value);
+      const scale = parseInt(document.getElementById('scale').value);
+      let gwa = 0;
+      if (scale === 4) {
+        gwa = (5.0 - gpa) * (5.0 / 4.0);
+      } else {
+        gwa = (5.0 - gpa);
+      }
+      document.getElementById('result').innerText = "Your GWA is: " + gwa.toFixed(3);
+    }
+  </script>
+</body>
+</html>
