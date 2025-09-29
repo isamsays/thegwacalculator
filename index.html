@@ -78,26 +78,110 @@
 <main>
   <!-- Calculator Above the Fold -->
   <section class="calculator">
-    <h2>Calculate Your GWA Instantly</h2>
-    <p>Use our free GWA Calculator below to quickly compute your General Weighted Average:</p>
-    <form id="gwa-form">
-      <table id="gwa-table">
+  <h2 style="text-align:center; margin-bottom:10px;">🎓 GWA Calculator</h2>
+  <p style="text-align:center; margin-bottom:20px;">
+    Enter your subjects, units, and grades below to instantly calculate your <strong>General Weighted Average</strong>.
+  </p>
+  
+  <form id="gwa-form">
+    <table id="gwa-table">
+      <thead>
         <tr>
           <th>Subject</th>
           <th>Units</th>
           <th>Grade</th>
+          <th>Action</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
-          <td><input type="text" name="subject[]" required></td>
-          <td><input type="number" name="units[]" step="0.1" required></td>
-          <td><input type="number" name="grade[]" step="0.01" required></td>
+          <td><input type="text" name="subject[]" placeholder="e.g. Math" required></td>
+          <td><input type="number" name="units[]" step="0.1" min="0" required></td>
+          <td><input type="number" name="grade[]" step="0.01" min="1" max="5" required></td>
+          <td><button type="button" onclick="removeRow(this)">❌</button></td>
         </tr>
-      </table>
-      <button type="button" onclick="addRow()">+ Add Subject</button>
-      <button type="button" onclick="calculateGWA()">Calculate GWA</button>
-    </form>
-    <h3 id="gwa-result"></h3>
-  </section>
+      </tbody>
+    </table>
+    
+    <div style="text-align:center; margin-top:20px;">
+      <button type="button" onclick="addRow()">➕ Add Subject</button>
+      <button type="button" onclick="calculateGWA()">📊 Calculate GWA</button>
+      <button type="reset" onclick="resetResult()">🔄 Reset</button>
+    </div>
+  </form>
+  
+  <div id="gwa-result" style="text-align:center; margin-top:20px; font-weight:bold;"></div>
+</section>
+
+<style>
+  .calculator { 
+    max-width: 700px; margin: 20px auto; padding: 25px; 
+    background: #ffffff; border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .calculator table { width: 100%; border-collapse: collapse; }
+  .calculator th, .calculator td { 
+    border: 1px solid #ddd; padding: 10px; text-align: center; 
+  }
+  .calculator th { background: #f0f6ff; }
+  .calculator input { 
+    width: 95%; padding: 6px; border: 1px solid #ccc; border-radius: 6px; 
+  }
+  .calculator button { 
+    background: #004080; color: #fff; border: none; 
+    padding: 10px 15px; margin: 5px; border-radius: 6px; 
+    cursor: pointer; font-size: 14px; transition: background 0.2s ease; 
+  }
+  .calculator button:hover { background: #0066cc; }
+  .calculator td button { background: #cc0000; padding: 6px 10px; font-size: 12px; }
+  .calculator td button:hover { background: #ff3333; }
+</style>
+
+<script>
+function addRow() {
+  let tableBody = document.querySelector("#gwa-table tbody");
+  let row = document.createElement("tr");
+  row.innerHTML = `
+    <td><input type="text" name="subject[]" placeholder="e.g. Science" required></td>
+    <td><input type="number" name="units[]" step="0.1" min="0" required></td>
+    <td><input type="number" name="grade[]" step="0.01" min="1" max="5" required></td>
+    <td><button type="button" onclick="removeRow(this)">❌</button></td>
+  `;
+  tableBody.appendChild(row);
+}
+
+function removeRow(btn) {
+  let row = btn.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+
+function calculateGWA() {
+  let units = document.getElementsByName("units[]");
+  let grades = document.getElementsByName("grade[]");
+  let totalUnits = 0, totalWeighted = 0;
+
+  for (let i = 0; i < units.length; i++) {
+    let u = parseFloat(units[i].value);
+    let g = parseFloat(grades[i].value);
+    if (!isNaN(u) && !isNaN(g)) {
+      totalUnits += u;
+      totalWeighted += u * g;
+    }
+  }
+
+  if (totalUnits > 0) {
+    let gwa = (totalWeighted / totalUnits).toFixed(2);
+    document.getElementById("gwa-result").innerHTML = 
+      `✅ Your GWA is: <strong>${gwa}</strong><br>📌 Total Units: ${totalUnits}`;
+  } else {
+    document.getElementById("gwa-result").innerText = "⚠️ Please enter valid values.";
+  }
+}
+
+function resetResult() {
+  document.getElementById("gwa-result").innerText = "";
+}
+</script>
 
   <!-- Longform SEO Content -->
   <h1>GWA Calculator Philippines 2025</h1>
