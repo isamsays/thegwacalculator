@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://thegwacalculator.netlify.app/sitemap.xml
